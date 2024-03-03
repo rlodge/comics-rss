@@ -21,10 +21,7 @@ case class ComicsKingdomPageReader(comic: ComicsKingdomComic) {
 			.map(d => ComicLink(
 				d,
 				comic.link + fmt.format(d),
-				comic.name,
-				description = Some(
-					s"<p><a href='${comic.link + fmt.format(d)}'>Primary Link</a></p><p><a href='${comic.link.replace("v7.comicskingdom.net/comics", "comicskingdom.com") + fmt.format(d)}'>Secondary Link</a></p>"
-				)
+				comic.name
 			))
 	}
 
