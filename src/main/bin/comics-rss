@@ -1,0 +1,7 @@
+#!/bin/bash
+
+current=$(pwd)
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+cd "${DIR}"
+java $JAVA_OPTS -cp 'lib/*' -jar ${project.artifactId}-${project.version}.jar $@
