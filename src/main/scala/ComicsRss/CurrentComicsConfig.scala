@@ -14,7 +14,7 @@ object CurrentComicsConfig {
 		ComicsKingdomComic("Zits", "https://comicskingdom.com/zits/", schedule = Schedule.SevenDays),
 		ComicsKingdomComic("Prince Valiant", "https://comicskingdom.com/prince-valiant/", schedule = Schedule.Sunday),
 		GoComicsDotComComic("Crankshaft", "https://www.gocomics.com/crankshaft", schedule = Schedule.SevenDays),
-		GoComicsDotComComic("9 Chickweed Lane", "https://www.gocomics.com/9chickweedlane", schedule = Schedule.SevenDays),
+		GoComicsDotComComic("9 Chickweed Lane", "https://www.gocomics.com/9-chickweed-lane", schedule = Schedule.SevenDays),
 		GoComicsDotComComic("Baby Blues", "https://www.gocomics.com/babyblues", schedule = Schedule.SevenDays),
 		GoComicsDotComComic("Baldo", "https://www.gocomics.com/baldo", schedule = Schedule.SevenDays),
 		GoComicsDotComComic("Doonesbury", "https://www.gocomics.com/doonesbury", schedule = Schedule.Sunday),
