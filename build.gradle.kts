@@ -6,6 +6,7 @@ plugins {
     `java-library`
     `maven-publish`
     kotlin("jvm") version "2.2.0"
+    jacoco
 }
 
 layout.buildDirectory = file("target")
@@ -31,12 +32,13 @@ dependencies {
 
     implementation(libs.log4j.api)
     implementation(libs.log4j.core)
-    runtimeOnly(libs.log4j.slf4j18.impl)
+    runtimeOnly(libs.log4j.slf4j.impl)
     runtimeOnly(libs.aws.lambda.java.log4j2)
 
     testImplementation(libs.junit.jupiter.api)
     testRuntimeOnly(libs.junit.jupiter.engine)
     testRuntimeOnly(libs.junit.jupiter.platform)
+    testRuntimeOnly(libs.log4j.slf4j.impl)
     testImplementation(libs.assertj.core)
 }
 
@@ -54,6 +56,7 @@ publishing {
 
 tasks.test {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
 }
 
 val packageZip by tasks.registering(Zip::class) {
