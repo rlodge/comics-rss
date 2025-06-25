@@ -5,4 +5,8 @@
 hs_err_pid*
 target/
 .idea/
-
+.kotlin
+.gradle
+.DS_Store
+Thumbs.db
+*.iml
